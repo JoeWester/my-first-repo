@@ -1,1 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Галерея Тороса Андрія Володимировича</title>
+</head>
+<body>
+    <h1>Галерея Тороса Андрія Володимировича</h1>
+    <a href="index.html">Назад на головну</a>
+    <h2>Мої зображення</h2>
+    <h3>Зображення у цій папці</h3>
+    <img id="image1" src="" alt="Зображення 1" width="640" height="480">
+    <h3>Зображення у папці</h3>
+    <img id="image2" src="" alt="Зображення 2" width="640" height="480">
+    <h3>Зображення онлайн</h3>
+    <img id="image3" src="" alt="Зображення онлайн" width="1280" height="1024">
 
+    <script>
+        // Масив із зображеннями у цій папці
+        const imagesInFolder = ['img/lis-foto.webp', 'img/0.jpg'];
+
+        // Випадкове зображення з масиву
+        const randomImage1 = imagesInFolder[Math.floor(Math.random() * imagesInFolder.length)];
+        document.getElementById('image1').src = randomImage1;
+
+        // Випадкове зображення у папці
+        const randomImage2 = 'img/' + Math.floor(Math.random() * 10) + '.jpg';
+        document.getElementById('image2').src = randomImage2;
+
+        // Випадкове зображення онлайн
+        const randomOnlineImage = 'https://place-hold.it/' + (Math.floor(Math.random() * 200) + 800) + 'x' + (Math.floor(Math.random() * 200) + 600);
+        document.getElementById('image3').src = randomOnlineImage;
+    </script>
+</body>
+</html>
